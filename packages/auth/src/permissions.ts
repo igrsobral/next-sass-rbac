@@ -13,7 +13,7 @@ export const permissions: Record<Role, PermissionsByRole> = {
   ADMIN(_, { can }) {
     can('manage', 'all')
   },
-  MEMBER(user, { can }) {
+  MEMBER(_, { can }) {
     can('invite', 'User')
   },
 }

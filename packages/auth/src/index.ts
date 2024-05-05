@@ -9,8 +9,8 @@ import {
 import { User } from './models/user'
 import { permissions } from './permissions'
 
-const actions = ['manage', 'invite', 'delete'] as const
-const subjects = ['User', 'all'] as const
+const actions = ['manage', 'create', 'invite', 'delete'] as const
+const subjects = ['User', 'Projects', 'all'] as const
 
 type AppAbilities = [
   (typeof actions)[number],
