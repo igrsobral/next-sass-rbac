@@ -1,1 +1,1 @@
-export type UserSubject = ['create' | 'delete' | 'invite', 'User']
+export type UserSubject = ['create' | 'delete' | 'invite' | 'manage', 'User']
