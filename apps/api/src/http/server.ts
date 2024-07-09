@@ -12,6 +12,7 @@ import {
 
 import { authenticateWithPassword } from '@/http/routes/auth/authenticate-with-password'
 
+import { errorHandler } from './error-handler'
 import { createAccount } from './routes/auth/create-account'
 import { getProfile } from './routes/auth/get-profile'
 
@@ -31,6 +32,8 @@ app.register(fastifySwagger, {
   },
   transform: jsonSchemaTransform,
 })
+
+app.setErrorHandler(errorHandler)
 
 app.register(fastifySwaggerUI, {
   routePrefix: '/docs',
