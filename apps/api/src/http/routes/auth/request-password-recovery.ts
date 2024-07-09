@@ -4,7 +4,7 @@ import { z } from 'zod'
 
 import { prisma } from '@/lib/prisma'
 
-export async function requestPasswordRecover(app: FastifyInstance) {
+export async function requestPasswordRecovery(app: FastifyInstance) {
   app.withTypeProvider<ZodTypeProvider>().post(
     '/password/recover',
     {
