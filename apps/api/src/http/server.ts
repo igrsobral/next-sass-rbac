@@ -21,6 +21,8 @@ import { createOrganization } from '@/http/routes/orgs/create-organization'
 import { getMembership } from '@/http/routes/orgs/get-membership'
 import { getOrganization } from '@/http/routes/orgs/get-organization'
 import { getOrganizations } from '@/http/routes/orgs/get-organizations'
+import { shutdownOrganization } from '@/http/routes/orgs/shutdown-organization'
+import { updateOrganization } from '@/http/routes/orgs/update-organization'
 
 import { errorHandler } from './error-handler'
 
@@ -71,6 +73,8 @@ app.register(createOrganization)
 app.register(getMembership)
 app.register(getOrganization)
 app.register(getOrganizations)
+app.register(updateOrganization)
+app.register(shutdownOrganization)
 
 app.listen({ port: env.SERVER_PORT }).then(() => {
   console.log('HTTP server running!')
