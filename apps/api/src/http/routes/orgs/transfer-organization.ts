@@ -19,7 +19,7 @@ export async function transferOrganization(app: FastifyInstance) {
         schema: {
           tags: ['Organizations'],
           summary: 'Transfer organization ownership',
-          security: [{ bearerAuth: [] }],
+          security: [{ BearerAuth: [] }],
           body: z.object({
             transferToUserId: z.string().uuid(),
           }),
